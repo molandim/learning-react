@@ -1,3 +1,5 @@
+import constants from '../constants/constants';
+
 let initialState = [];
 export default function shoppingCart(state = initialState, action) {
     switch (action.type) {

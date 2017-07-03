@@ -8,8 +8,11 @@ constructor(props) {
     super(props);
     
     this.state = {
-      count: props.store.getState()
+      count: props.store.getState().count
     }
+      console.log('this.state: ', this.state);
+
+
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
   
@@ -21,7 +24,7 @@ constructor(props) {
 
   handleChange(){
     this.setState({
-      count:this.props.store.getState()
+      count:this.props.store.getState().count
     })
   }
 

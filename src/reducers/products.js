@@ -1,3 +1,5 @@
+import constants from '../constants/constants';
+
 let initialState = [
     { id: 10, name: 'pizza', cost: 10, category: 'food' },
     { id: 32, name: 'apples', cost: 5, category: 'food' },

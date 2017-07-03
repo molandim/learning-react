@@ -5,15 +5,21 @@ import activeCategory from './activeCategory';
 import products from './products';
 import shoppingCart from './shoppingCart';
 
+/* That is an sample with complex reducers */
+//let reducer = combineReducers({ activeCategory, products, shoppingCart });
 
-/*export default function reducer(state = initialState, action) {
-  combineReducers(activateCategory, products, shoppingCart);
-}*/
+let initState = 0;
 
-let reducer = combineReducers(activeCategory, products, shoppingCart);
+function count(state = initState, action) {
+    switch (action.type) {
+        case constants.INCREMENT:
+            return state + 1;
+
+        default:
+            return state;
+    }
+}
+
+let reducer = combineReducers({ count, activeCategory }); //this is the same as {count:count}
+
 export default reducer;
-
-/*let s = reducer(initialState, { type: constants.CHANGE_CATEGORY, payload: 'noting' });
-s = reducer(s, { type: constants.ADD_TO_CART, payload: { id: 232, name: 'pearl', cost: 200 } });
-
-console.log(s);*/

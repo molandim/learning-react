@@ -5,8 +5,6 @@ import constants from './constants/constants';
 
 export class App extends React.Component {
  
-
-
   render(){
     return <div>
      <CountWidgetContainer store={this.props.store} />
